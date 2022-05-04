@@ -1,0 +1,8 @@
+$ vault kv get -format=json internal/database/config                                 1 ↵
+{
+  "data": {
+    "data": {
+      "password": "db-secret-password",
+      "username": "db-readonly-username"
+    },
+}

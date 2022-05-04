@@ -1,0 +1,7 @@
+$ vault read -format=json database/static-creds/education
+{
+  "data": {
+    "password": "-FLKZ18XlDvoL-ZLIFZS",
+    "username": "vault-edu"
+  },
+}

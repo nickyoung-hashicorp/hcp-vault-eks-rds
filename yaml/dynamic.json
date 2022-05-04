@@ -1,0 +1,7 @@
+$ vault read -format=json database/creds/readonly
+{
+  "data": {
+    "password": "6kmFPb0tTZRrX2WLJnz-",
+    "username": "v-token-readonly-CgRtXV4aGGDa8NPwwMPD-1651547739"
+  },
+}

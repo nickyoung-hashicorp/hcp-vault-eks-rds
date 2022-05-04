@@ -1,0 +1,15 @@
+spec:
+  template:
+    metadata:
+      annotations:
+        vault.hashicorp.com/agent-inject: "true"
+        vault.hashicorp.com/role: "product"
+        vault.hashicorp.com/namespace: "admin"
+        vault.hashicorp.com/agent-inject-secret-conf.json: "database/creds/product"
+        vault.hashicorp.com/agent-inject-template-conf.json: |
+          {
+            "bind_address": ":9090",
+            {{ with secret "database/creds/product" -}}
+            "db_connection": "host=postgres port=5432 user={{ .Data.username }} password={{ .Data.password }} dbname=products sslmode=disable"
+            {{- end }}
+          }
