@@ -59,7 +59,6 @@ resource "aws_db_instance" "rds" {
   vpc_security_group_ids = [aws_security_group.postgres.id]
   port                   = "5432"
   db_subnet_group_name   = aws_db_subnet_group.rds.name
-  publicly_accessible    = true
   db_name                = "postgresdb"
   allocated_storage      = 20
   engine                 = "postgres"
