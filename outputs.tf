@@ -10,7 +10,7 @@ output "eks_id" { value = aws_eks_cluster.k8squickstart-eks.id }
 
 output "eks_endpoint" { value = aws_eks_cluster.k8squickstart-eks.endpoint }
 
-output "eks_ca_data" { value = aws_eks_cluster.k8squickstart-eks.certificate_authority.data }
+output "eks_ca_data" { value = aws_eks_cluster.k8squickstart-eks.certificate_authority.0.data }
 
 #--- EKS Outputs ---#
 # output "cluster_id" {
