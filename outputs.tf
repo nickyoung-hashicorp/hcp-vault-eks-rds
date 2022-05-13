@@ -1,7 +1,5 @@
 # Output RDS endpoint with port
-output "rds-endpoint" {
-  value = aws_db_instance.rds.endpoint
-}
+output "rds-endpoint" { value = aws_db_instance.rds.endpoint }
 
 # eks.tf outputs
 output "certificate_authority" { value = aws_eks_cluster.k8squickstart-eks.certificate_authority }
