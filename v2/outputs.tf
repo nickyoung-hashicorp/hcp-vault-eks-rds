@@ -1,6 +1,10 @@
 # Outputs file
+output "vault_ssh" {
+  value = "ssh -i ssh-key.pem ubuntu@${aws_eip.vault.public_ip}"
+}
+
 output "vault_ip" {
-  value = "http://${aws_eip.vault.public_ip}"
+  value = aws_eip.vault.public_ip
 }
 
 # Output RDS endpoint with port
