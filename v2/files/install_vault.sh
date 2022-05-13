@@ -58,4 +58,4 @@ EOF
 
 sudo chmod 0644 /etc/systemd/system/vault.service
 
-service vault start
+sudo systemctl start vault
