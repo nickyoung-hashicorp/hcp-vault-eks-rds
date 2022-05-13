@@ -221,7 +221,7 @@ locals {
   private_key_filename = "ssh-key.pem"
 }
 
-resource "aws_key_pair" "eks" {
+resource "aws_key_pair" "vault" {
   key_name   = local.private_key_filename
   public_key = tls_private_key.this.public_key_openssh
 }
