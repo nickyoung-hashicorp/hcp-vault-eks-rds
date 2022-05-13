@@ -174,8 +174,8 @@ resource "aws_instance" "vault" {
 # Set up some environment variables for our script.
 # Add execute permissions to our scripts.
 # Run the deploy_app.sh script.
-resource "null_resource" "configure-cat-app" {
-  depends_on = [aws_eip_association.eks]
+resource "null_resource" "configure-vault" {
+  depends_on = [aws_eip_association.vault]
 
   triggers = {
     build_number = timestamp()
