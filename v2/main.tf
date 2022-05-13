@@ -103,7 +103,7 @@ resource "aws_internet_gateway" "this" {
   }
 }
 
-resource "aws_route_table" "eks" {
+resource "aws_route_table" "this" {
   vpc_id = aws_vpc.this.id
 
   route {
@@ -112,9 +112,14 @@ resource "aws_route_table" "eks" {
   }
 }
 
-resource "aws_route_table_association" "eks" {
-  subnet_id      = aws_subnet.eks.id
-  route_table_id = aws_route_table.eks.id
+resource "aws_route_table_association" "a" {
+  subnet_id      = aws_subnet.a.id
+  route_table_id = aws_route_table.this.id
+}
+
+resource "aws_route_table_association" "b" {
+  subnet_id      = aws_subnet.b.id
+  route_table_id = aws_route_table.this.id
 }
 
 data "aws_ami" "ubuntu" {
