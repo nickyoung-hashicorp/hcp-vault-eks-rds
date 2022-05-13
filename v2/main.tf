@@ -218,5 +218,5 @@ locals {
 
 resource "aws_key_pair" "eks" {
   key_name   = local.private_key_filename
-  public_key = tls_private_key.eks.public_key_openssh
+  public_key = tls_private_key.this.public_key_openssh
 }
