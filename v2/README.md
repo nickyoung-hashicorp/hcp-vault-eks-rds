@@ -11,7 +11,8 @@ exit
 
 ### Install Vault on workstation
 ```sh
-wget https://releases.hashicorp.com/vault/1.10.3/vault_1.10.3_linux_amd64.zip
+export VAULT_VERSION=1.10.3 # Choose your desired Vault version
+wget https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip
 unzip -j vault_*_linux_amd64.zip -d /usr/local/bin
 export VAULT_TOKEN=hvs.B1CloLDutkyv1bb9MEQILeJw
 export VAULT_ADDR=http://54.203.106.170:8200
